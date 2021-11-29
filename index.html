@@ -1,9 +1,28 @@
-<html>
- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adriano Barbosa dev</title>
+</head>
 <body>
-  <h1>Adriano Barbosa</h1>
-  <p>Welcome to my website!</p>
-  <img src="https://content.codecademy.com/articles/github-pages-via-web-app/happy-ice-cream.gif" />
+  <h1>Adriano Barbosa Desenvolvedor WEB</h1>
+
+  <div>
+    <h2>pedra, papel e tesoura</h2>
+    <h3>Escolha</h3>
+    <button id='paper' value="paper" onclick="getUserChoice(this.value)"><img src='./img/paper.jpg' /></button>
+    <button id='rock' value='rock' onclick="getUserChoice(this.value)"><img src='./img/rock.jpg' /></button>
+    <button id='scissors' value="scissors" onclick="getUserChoice(this.value)"><img src='./img/scissors.jpg' /></button>
+    <button id='start' onclick="playGame()">start</button>
+  </div>
+  <div id='resultado'>
+
+  </div>
+
+
 </body>
- 
+<script src='javascript.js'></script>
 </html>
+
