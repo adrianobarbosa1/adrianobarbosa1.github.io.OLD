@@ -1,3 +1,5 @@
+//SITE DE REFERENCIA https://www.youtube.com/watch?v=JP3eYU137t8
+
 const getUserChoice = (userInput) => {
   userInput = userInput.toLowerCase();
   console.log(userInput)

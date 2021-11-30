@@ -1,0 +1,46 @@
+
+#container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#player, #cpu {
+    position: relative;
+    flex-grow: 1;
+    border-radius: 5px;
+    width: 200px;
+    padding: 20px;
+    color: #fff;
+}
+
+#player{
+    background-color: aqua;
+}
+
+#cpu {
+    background-color: pink;
+}
+
+ul#player-choice, ul#cpu-choice {
+    list-style: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+ul#player-choice li, ul#cpu-choice li {
+    display: inline;
+}
+ul#player-choice li a, ul#cpu-choice li a{
+    opacity: .2;
+}
+ul#player-choice li a:hover {
+    opacity: 1;
+}
+ul#cpu-choice li a:hover {
+    opacity: 1;
+}
+ul#player-choice li a img, ul#cpu-choice li a img{
+    max-width: 80px;
+}
