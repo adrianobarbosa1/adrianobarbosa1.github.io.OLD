@@ -1,3 +1,5 @@
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+
 export default [
     {
         path: 'home',
@@ -18,5 +20,13 @@ export default [
     {
         path: 'contato',
         label: 'Contato',
+    },
+    {
+        path: 'https://github.com/adrianobarbosa1',
+        label: <FaGithub />,
+    },
+    {
+        path: 'https://www.linkedin.com/in/adriano-barbosa-10892750',
+        label: <FaLinkedin />,
     },
 ];
