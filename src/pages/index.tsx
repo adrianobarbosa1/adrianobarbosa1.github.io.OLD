@@ -5,8 +5,24 @@ import styles from './styles.module.scss'
 const IndexPage: NextPage = () => {
   return (
     <>
-      <div >
-        <div className={styles.container} />
+      <div className={styles.container}>
+        <div className={styles.background} />
+        <Adriano />
+      </div>
+      <div className={styles.container}>
+        <div className={styles.background} />
+        <Adriano />
+      </div>
+      <div className={styles.container}>
+        <div className={styles.background} />
+        <Adriano />
+      </div>
+      <div className={styles.container}>
+        <div className={styles.background} />
+        <Adriano />
+      </div>
+      <div className={styles.container}>
+        <div className={styles.background} />
         <Adriano />
       </div>
     </>

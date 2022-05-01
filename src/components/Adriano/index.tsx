@@ -10,8 +10,11 @@ export function Adriano() {
             <div className={styles.container}>
                 <div className={styles.content}>
                     <h1>ADRIANO BARBOSA</h1>
-                    <p>DESENVOLVEDOR WEB</p>
-                    <p>PROGRAMADOR JAVASCRIPT</p>
+                    <p>
+                        DESENVOLVEDOR WEB <br />
+                        PROGRAMADOR JAVASCRIPT
+
+                    </p>
                     <div className={styles.type}>
                         <Typewriter
                             options={{
