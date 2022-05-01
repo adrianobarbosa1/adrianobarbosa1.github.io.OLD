@@ -6,7 +6,7 @@ export function Logo() {
     return (
         <>
             <div className={styles.container}>
-                <Image src='./image/logo.jpg' />
+                <Image src='./image/logo.jpg' alt='imgLogo' />
             </div>
 
         </>
