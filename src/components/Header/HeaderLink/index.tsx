@@ -29,7 +29,9 @@ export function HeaderLink() {
         {menuSocial.map(({ path, icon }, i) => {
           return (
             <Link key={i} href={path}>
-              <a> {icon}</a>
+              <a>
+                <span>{icon}</span>
+              </a>
             </Link>
           );
         })}

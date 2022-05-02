@@ -17,12 +17,16 @@
     transition: all 0.2s;
 
     & + a {
-      margin-left: 1rem;
+      margin-left: 0.75rem;
     }
 
     &:hover {
       transform: scale(1.8);
       color: var(--blue);
+    }
+
+    span {
+      margin-left: -1rem;
     }
   }
 }
