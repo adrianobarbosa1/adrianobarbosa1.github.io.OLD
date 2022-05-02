@@ -1,18 +1,18 @@
 .container {
-	max-width: 1120px;
+  max-width: 1120px;
   height: auto;
-	margin: 0 auto;
-	padding: 160px 0;
-  border: 1px solid red;
+  margin: 0 auto;
+  padding: 160px 0;
+  // border: 1px solid red;
 }
 
 .container::after {
-	content: '';
-	display: table;
-	clear: both;
+  content: "";
+  display: table;
+  clear: both;
 }
 
-.background{
+.background {
   // display: block;
   position: absolute;
   z-index: -1;

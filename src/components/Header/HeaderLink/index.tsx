@@ -1,32 +1,39 @@
 import React from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { Link } from 'react-scroll';
-import { Nav } from "../../../../types";
+import { Link as LinScroll } from "react-scroll";
+import Link from "next/link";
 
-import menuItems from '../header.data'
+import { menuItems, menuSocial } from "./header.data";
 
-import styles from './styles.module.scss'
+import styles from "./styles.module.scss";
 
 export function HeaderLink() {
-    return (
-        <>
-            <nav className={styles.container}>
-                {menuItems.map((item, i) => {
-                    return (
-                        <Link
-                            activeClass='active'
-                            to={item.path}
-                            spy={true}
-                            smooth={true}
-                            offset={-70}
-                            duration={500}
-                            key={i}
-                        >
-                            {item.label}
-                        </Link>
-                    )
-                })}
-            </nav>
-        </>
-    )
+  return (
+    <>
+      <nav className={styles.container}>
+        {menuItems.map(({ path, label }, i) => {
+          return (
+            <LinScroll
+              activeClass="active"
+              to={path}
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              key={i}
+            >
+              {label}
+            </LinScroll>
+          );
+        })}
+        {menuSocial.map(({ path, icon }, i) => {
+          return (
+            <Link key={i} href={path}>
+              <a> {icon}</a>
+            </Link>
+          );
+        })}
+      </nav>
+    </>
+  );
 }

@@ -1,24 +1,28 @@
-.container{
-  margin-top: 0.5rem;;
-   
-  a{
-   display: inline-block;
-   position: relative;
-   padding: 0 0.5rem;
-   cursor: pointer;
-   font: 700 1.125rem  'Montserrat';
-   color: var(--text-title);
+.container {
+  max-width: auto;
+  margin-top: 0.5rem;
 
-   transition: color 0.2s;
+  @media (max-width: 990px) {
+    display: none;
+  }
 
-   & + a {
+  a {
+    position: relative;
+    padding: 0 0.75rem;
+    cursor: pointer;
+    font: 700 1.125rem "Montserrat";
+    line-height: 1.2;
+    color: var(--text-title);
+
+    transition: all 0.2s;
+
+    & + a {
       margin-left: 1rem;
     }
 
-   &:hover{
-      color:var(--blue);
-      transform: scale(1.02);
-   }
+    &:hover {
+      transform: scale(1.8);
+      color: var(--blue);
+    }
   }
-  
 }
