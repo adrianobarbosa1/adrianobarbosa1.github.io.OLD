@@ -22,14 +22,3 @@ export const menuItems = [
     label: "Contato",
   },
 ];
-
-export const menuSocial = [
-  {
-    path: "https://github.com/adrianobarbosa1",
-    icon: <FaGithub />,
-  },
-  {
-    path: "https://www.linkedin.com/in/adriano-barbosa-10892750",
-    icon: <FaLinkedin />,
-  },
-];

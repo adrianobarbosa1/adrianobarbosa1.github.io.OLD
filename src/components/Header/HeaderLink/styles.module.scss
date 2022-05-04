@@ -1,9 +1,9 @@
 .container {
-  max-width: auto;
-  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
 
-  @media (max-width: 990px) {
-    display: none;
+  li {
+    text-decoration: none;
   }
 
   a {
@@ -14,19 +14,25 @@
     line-height: 1.2;
     color: var(--text-title);
 
-    transition: all 0.2s;
+    transition: color 0.4s;
 
     & + a {
       margin-left: 0.75rem;
     }
 
     &:hover {
-      transform: scale(1.8);
+      transition: color 0.4s;
       color: var(--blue);
     }
 
-    span {
-      margin-left: -1rem;
+    &:last-child {
+      margin: 0;
     }
+  }
+}
+
+@media (max-width: 960px) {
+  .nav {
+    display: none;
   }
 }

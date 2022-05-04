@@ -28,7 +28,7 @@
   align-items: center;
   justify-content: center;
 
-  transition: "all 0.4s ease";
+  transition: all 0.4s ease;
 
   @keyframes pulse {
     0% {
@@ -47,7 +47,7 @@
 .container {
   width: 100%;
   max-width: 1120px;
-  margin-top: 2rem;
+  // margin-top: 2rem;
   display: flex;
   justify-content: space-between;
   // border: 1px solid yellow;
