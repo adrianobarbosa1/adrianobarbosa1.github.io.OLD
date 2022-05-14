@@ -23,8 +23,8 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "src/components/Header/HeaderLink/index.js",
-    "src/components/Header/HeaderLink/index.js"
+    "src/components/Header/NavBar/index.js",
+    "src/components/Header/NavBar/index.js"
   ],
   "exclude": [
     "node_modules"
