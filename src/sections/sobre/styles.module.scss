@@ -1,0 +1,48 @@
+.container {
+  width: 100%;
+  height: 100vh;
+  background: var(--background2);
+}
+
+.content {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding-top: 1.75rem;
+  display: flex;
+
+  // border: 1px solid blue;
+}
+
+.content::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.containerImg {
+  width: 350px;
+  height: 800px;
+  // border: 1px solid yellow;
+  display: flex;
+  align-items: flex-start;
+  margin-top: 2rem;
+  // justify-content: flex-start;
+
+  img {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 300px;
+  }
+}
+
+.containerText {
+  // border: 1px solid red;
+  color: rgb(228, 228, 228);
+  padding: 2rem;
+
+  p {
+    max-width: 30rem;
+    margin-top: 2rem;
+  }
+}

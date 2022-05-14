@@ -10,12 +10,12 @@ export const menuItems = [
     label: "Sobre",
   },
   {
-    path: "portfolio",
-    label: "Portfólio",
-  },
-  {
     path: "servicos",
     label: "Serviços",
+  },
+  {
+    path: "portfolio",
+    label: "Portfólio",
   },
   {
     path: "contato",

@@ -1,9 +1,15 @@
+import { Adriano } from '../../components/Adriano';
+import styles from './styles.module.scss'
 
-
-export function Home() {
+const Home = () => {
     return (
-        <section>
+        <>
+            <div className={styles.container} id="home">
+                <div className={styles.background} />
+                <Adriano />
+            </div>
+        </>
+    );
+};
 
-        </section>
-    )
-}
+export default Home;
