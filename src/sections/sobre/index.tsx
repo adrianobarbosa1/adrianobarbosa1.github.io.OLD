@@ -4,12 +4,13 @@ const Sobre = () => {
     return (
         <div className={styles.container}>
             <div className={styles.content} id="sobre">
+                <h1>Sobre</h1>
                 <div className={styles.containerImg}>
                     <img src='image/adriano.jpg' alt='foto Adriano' />
                 </div>
                 <div className={styles.containerText}>
                     {/* <div className={styles.background} /> */}
-                    <h1>Adriano Barbosa</h1>
+                    <h2>Adriano Barbosa</h2>
                     <hr />
                     <p>
                         Programador e desenvolvedor há mais de 6 anos atuando diretamente no mercado.
