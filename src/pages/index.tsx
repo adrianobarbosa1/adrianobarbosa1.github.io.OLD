@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
 import Contato from '../sections/contato';
-import Home from '../sections/home';
+import Home from '../sections/Home';
 import Portfolio from '../sections/portfolio';
 import Servicos from '../sections/servicos';
 import Sobre from '../sections/sobre';

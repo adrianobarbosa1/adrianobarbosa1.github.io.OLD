@@ -13,7 +13,8 @@ const Sobre = () => {
                     <h2>Adriano Barbosa</h2>
                     <hr />
                     <p>
-                        Programador e desenvolvedor há mais de 6 anos atuando diretamente no mercado.
+                        Formadoe em Análise e Desenvolvimento de Sistemas,
+                        Programador e desenvolvedor há mais de 6 anos, atuando diretamente no mercado.
                         Teve início na carreira em 2016 quando descobriu seu maior vício: códigos.
                         Seu primeiro trabalho foi na secretaria da educação, que
 

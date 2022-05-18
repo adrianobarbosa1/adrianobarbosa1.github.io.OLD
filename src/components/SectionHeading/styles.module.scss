@@ -1,0 +1,22 @@
+.container {
+  text-align: center;
+}
+
+.heading {
+  max-width: 660px;
+  height: 90px;
+  margin: 0 auto 5rem;
+  border: 1px solid purple;
+}
+.slogan {
+  color: var(--blue);
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+.title {
+  color: var(--text-title);
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+}
