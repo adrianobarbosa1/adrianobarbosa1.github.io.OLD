@@ -1,9 +1,14 @@
+import SectionHeading from '../../components/SectionHeading';
 import styles from './styles.module.scss'
 
 const Contato = () => {
     return (
         <div className={styles.container} id="contato">
-            <h1>Contato</h1>
+            <SectionHeading
+                className={styles.heading}
+                slogan='Contato'
+                title='Você tem alguma pergunta?'
+            />
 
         </div>
     );

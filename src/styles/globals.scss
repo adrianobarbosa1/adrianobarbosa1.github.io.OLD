@@ -6,7 +6,11 @@
 
 :root {
   --background: #fafafa;
-  --background2: #797979;
+  --background2: radial-gradient(
+    circle,
+    rgb(226, 226, 226) 0%,
+    rgb(201, 201, 201) 100%
+  );
   --blue: #00b8e4;
 
   --text-title: #525252;
