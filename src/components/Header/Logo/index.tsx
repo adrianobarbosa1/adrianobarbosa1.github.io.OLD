@@ -6,7 +6,14 @@ import styles from "./styles.module.scss";
 export function Logo() {
   return (
     <>
-      <ScrollLink path="home" className={styles.container}>
+      <ScrollLink className={styles.container}
+        activeClass="active"
+        to='home'
+        spy={true}
+        smooth={true}
+        offset={-70}
+        duration={500}
+        path='home'>
         <img src="./image/adr.svg" alt="logo adriano barbosa" />
       </ScrollLink>
     </>

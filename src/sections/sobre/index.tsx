@@ -2,8 +2,8 @@ import styles from './styles.module.scss'
 
 const Sobre = () => {
     return (
-        <div className={styles.container}>
-            <div className={styles.content} id="sobre">
+        <div className={styles.container} id="sobre">
+            <div className={styles.content} >
                 <h1>Sobre</h1>
                 <div className={styles.containerImg}>
                     <img src='image/adriano.jpg' alt='foto Adriano' />

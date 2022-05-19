@@ -4,7 +4,7 @@ const SectionHeading = ({ slogan, title, emoji, description, ...props }) => {
   return (
     <>
       <div className={styles.container}>
-        <div className={styles.heading} {...props}>
+        <div className={styles.content} {...props}>
           {slogan && (<div className={styles.slogan}>{slogan}</div>)}
           <h3 className={styles.title}>
             {emoji ? <span>{title}</span> : title}

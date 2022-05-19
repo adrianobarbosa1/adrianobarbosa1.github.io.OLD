@@ -9,7 +9,7 @@ const CardServicos = ({ data, ...props }) => {
             </figure>
             <div>
                 <div className={styles.h3}>{data?.title}</div>
-                <p>{data?.description}</p>
+                <p className={styles.p}>{data?.description}</p>
             </div>
 
         </div>
