@@ -1,7 +1,8 @@
 import SectionHeading from '../../components/SectionHeading';
-import SectionHeadingLight from '../../components/SectionHeadingLight';
-import styles from './styles.module.scss'
 import Carousel from 'react-elastic-carousel'
+import { portfolioData } from './portfolio.data';
+
+import styles from './styles.module.scss'
 
 const Portfolio = () => {
     return (
@@ -11,6 +12,12 @@ const Portfolio = () => {
                 slogan='Portfólio'
                 title='Confira alguns projetos realizados'
             />
+            <Carousel itemsToShow={3}>
+                {portfolioData?.map((item) => (
+                    <CardCarousel className={styles.servicosItem} key={item.id} data={item} />
+                ))}
+
+            </Carousel>
 
         </div>
     );
