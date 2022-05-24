@@ -1,8 +1,9 @@
 import { NavBar } from "./NavBar";
-import { Logo } from "./Logo";
+
 import styles from "./styles.module.scss";
 import { useState } from "react";
 import { HamburguerMenu } from "./hamburguerMenu";
+import { Logo } from "../Logo";
 
 export function Header() {
   const [state, setState] = useState(false);

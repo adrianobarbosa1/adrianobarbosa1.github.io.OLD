@@ -1,0 +1,29 @@
+.container {
+  // logo: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  width: auto;
+  height: auto;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.3rem;
+  margin-right: 0.5rem;
+  cursor: pointer;
+  // border: 1px solid cyan;
+  img {
+    width: 100%;
+  }
+}
+
+.p {
+  font: 900 1.2rem "Montserrat";
+}
+
+.pWhite {
+  color: whitesmoke;
+  font: 900 1.2rem "Montserrat";
+}
