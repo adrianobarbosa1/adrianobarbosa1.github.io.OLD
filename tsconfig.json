@@ -24,7 +24,6 @@
     "**/*.ts",
     "**/*.tsx",
     "src/components/Header/NavBar/index.js",
-    "src/components/Header/NavBar/index.js"
   ],
   "exclude": [
     "node_modules"

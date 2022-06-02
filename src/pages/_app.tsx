@@ -1,15 +1,17 @@
 import type { AppProps } from 'next/app'
-import Footer from '../components/Footer'
-import { Header } from '../components/Header'
+import { ChakraProvider } from '@chakra-ui/react'
 
-import '../styles/globals.scss'
+import Footer from '../components/Footer'
+import Header from '../components/Header'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
-      <Header />
-      <Component {...pageProps} />
-      <Footer />
+      <ChakraProvider>
+        <Header />
+        <Component {...pageProps} />
+        <Footer />
+      </ChakraProvider>
     </>
   )
 
