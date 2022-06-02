@@ -11,6 +11,7 @@ import { Link as ScrollLink } from "react-scroll";
 
 import { NAV_ITEMS } from './navItems.data';
 import DesktopSubNav from './DesktopSubNav';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 export default function DesktopNav() {
     const linkColor = useColorModeValue('gray.600', 'gray.200');
@@ -35,19 +36,20 @@ export default function DesktopNav() {
                             >
                                 <ScrollLink
                                     activeClass="active"
-                                    to={navItem.path ?? '#'}
+                                    to={navItem.path}
                                     spy={true}
                                     smooth={true}
                                     offset={-70}
                                     duration={500}
                                     key={i}
-                                    path={navItem.path ?? '#'}
+                                    path={navItem.path}
 
                                 >
                                     {navItem.label}
                                 </ScrollLink>
                             </Link>
                         </PopoverTrigger>
+
 
                         {navItem.children && (
                             <PopoverContent
@@ -68,6 +70,38 @@ export default function DesktopNav() {
                 </Box>
             ))
             }
+            <Link
+                p={1}
+                fontSize={'sm'}
+                fontWeight={500}
+                color={linkColor}
+                _hover={{
+                    textDecoration: 'none',
+                    color: linkHoverColor,
+                }}
+            >
+                <a target="_blank" href="https://github.com/adrianobarbosa1">
+                    <i>
+                        <FaGithub />
+                    </i>
+                </a>
+            </Link>
+            <Link
+                p={1}
+                fontSize={'sm'}
+                fontWeight={500}
+                color={linkColor}
+                _hover={{
+                    textDecoration: 'none',
+                    color: linkHoverColor,
+                }}
+            >
+                <a target="_blank" href="https://www.linkedin.com/in/adriano-barbosa-10892750">
+                    <i>
+                        <FaLinkedin />
+                    </i>
+                </a>
+            </Link>
         </Stack >
     );
 };

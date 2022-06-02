@@ -15,23 +15,20 @@ import {
     useBreakpointValue,
     useDisclosure,
 } from '@chakra-ui/react';
-import {
-    HamburgerIcon,
-    CloseIcon,
-    ChevronDownIcon,
-    ChevronRightIcon,
-} from '@chakra-ui/icons';
+import { ChevronDownIcon } from '@chakra-ui/icons';
+import { Link as ScrollLink } from "react-scroll";
+
 import NavItem from './navItems.data';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
-export default function MobileNavItem({ label, children, href }: NavItem) {
+export default function MobileNavItem({ label, children, path }: NavItem) {
     const { isOpen, onToggle } = useDisclosure();
-
+    console.log(children)
     return (
         <Stack spacing={4} onClick={children && onToggle}>
             <Flex
                 py={2}
                 as={Link}
-                href={href ?? '#'}
                 justify={'space-between'}
                 align={'center'}
                 _hover={{
@@ -63,8 +60,22 @@ export default function MobileNavItem({ label, children, href }: NavItem) {
                     align={'start'}>
                     {children &&
                         children.map((child) => (
-                            <Link key={child.label} py={2} href={child.href}>
+                            <Link key={child.label} py={2} href={child.path}>
                                 {child.label}
+                                <ScrollLink
+                                    activeClass="active"
+                                    to={path}
+                                    spy={true}
+                                    smooth={true}
+                                    offset={-70}
+                                    duration={500}
+                                    key={label}
+                                    path={path}
+
+                                >
+                                    {child.label}
+                                </ScrollLink>
+
                             </Link>
                         ))}
                 </Stack>
