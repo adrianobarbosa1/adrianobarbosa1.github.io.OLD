@@ -4,22 +4,26 @@ import {
     Link,
     Popover,
     PopoverTrigger,
-    PopoverContent,
     useColorModeValue,
+    Icon,
 } from '@chakra-ui/react';
 import { Link as ScrollLink } from "react-scroll";
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 import { NAV_ITEMS } from './navItems.data';
-import DesktopSubNav from './DesktopSubNav';
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 export default function DesktopNav() {
     const linkColor = useColorModeValue('gray.600', 'gray.200');
     const linkHoverColor = useColorModeValue('blue.500', 'white');
-    const popoverContentBgColor = useColorModeValue('white', 'gray.800');
 
     return (
-        <Stack direction={'row'} spacing={4}>
+        <Stack
+            align='center'
+            justify='center'
+            direction={'row'}
+            spacing={4}
+        >
+
             {NAV_ITEMS.map((navItem, i) => (
                 <Box key={navItem.label}>
                     <Popover trigger={'hover'} placement={'bottom-start'}>
@@ -27,8 +31,9 @@ export default function DesktopNav() {
                             <Link
                                 p={2}
                                 fontSize={'sm'}
-                                fontWeight={500}
+                                fontWeight="bold"
                                 color={linkColor}
+                                transition={'color .3s'}
                                 _hover={{
                                     textDecoration: 'none',
                                     color: linkHoverColor,
@@ -49,58 +54,35 @@ export default function DesktopNav() {
                                 </ScrollLink>
                             </Link>
                         </PopoverTrigger>
-
-
-                        {navItem.children && (
-                            <PopoverContent
-                                border={0}
-                                boxShadow={'xl'}
-                                bg={popoverContentBgColor}
-                                p={4}
-                                rounded={'xl'}
-                                minW={'sm'}>
-                                <Stack>
-                                    {navItem.children.map((child) => (
-                                        <DesktopSubNav key={child.label} {...child} />
-                                    ))}
-                                </Stack>
-                            </PopoverContent>
-                        )}
                     </Popover>
                 </Box>
             ))
             }
             <Link
-                p={1}
-                fontSize={'sm'}
-                fontWeight={500}
+                pt={2}
+                target="_blank"
+                href="https://github.com/adrianobarbosa1"
                 color={linkColor}
+                transition={'color .3s'}
                 _hover={{
                     textDecoration: 'none',
                     color: linkHoverColor,
                 }}
             >
-                <a target="_blank" href="https://github.com/adrianobarbosa1">
-                    <i>
-                        <FaGithub />
-                    </i>
-                </a>
+                <Icon w={4} h={4} as={FaGithub} />
             </Link>
             <Link
-                p={1}
-                fontSize={'sm'}
-                fontWeight={500}
+                pt={2}
+                target="_blank"
+                href="https://www.linkedin.com/in/adriano-barbosa-10892750"
                 color={linkColor}
+                transition={'color .3s'}
                 _hover={{
                     textDecoration: 'none',
                     color: linkHoverColor,
                 }}
             >
-                <a target="_blank" href="https://www.linkedin.com/in/adriano-barbosa-10892750">
-                    <i>
-                        <FaLinkedin />
-                    </i>
-                </a>
+                <Icon w={4} h={4} as={FaLinkedin} />
             </Link>
         </Stack >
     );

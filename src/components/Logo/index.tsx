@@ -1,31 +1,52 @@
-import Image from "next/image";
+import { Box, Flex, HStack, Icon, Stack, Text, useBreakpointValue } from "@chakra-ui/react";
 import { Link as ScrollLink } from "react-scroll";
-
-import styles from "./styles.module.scss";
+import { adrIcon, adrIconWhite } from "../../../public/image/custonIcons";
 
 export function Logo() {
   return (
-    <><div className={styles.container} >
-      <ScrollLink className={styles.logo}
-        activeClass="active"
-        to='home'
-        spy={true}
-        smooth={true}
-        offset={-70}
-        duration={500}
-        path='home'>
-        <img src="./image/adr.svg" alt="Logo Adriano Barbosa" />
-      </ScrollLink>
-      <p className={styles.p}>Adriano Barbosa</p>
-    </div>
+    <>
+      <Flex
+        cursor='pointer'
+      >
+
+        <ScrollLink
+          activeClass="active"
+          to='home'
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={500}
+          path='home'>
+          <Flex
+            align='center'
+          >
+
+            <Icon mt={1} width="75" height="30" as={adrIcon} />
+
+            <Text
+              as='p'
+              ml='0.5rem'
+              textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
+              fontWeight="bold"
+            >
+              Adriano Barbosa
+            </Text>
+          </Flex>
+
+        </ScrollLink>
+      </Flex>
     </>
   );
 }
 
 export function LogoWhite() {
   return (
-    <><div className={styles.container} >
-      <ScrollLink className={styles.logo}
+    <><Flex
+      align='center'
+      justify='center'
+      cursor='pointer'
+    >
+      <ScrollLink
         activeClass="active"
         to='home'
         spy={true}
@@ -33,10 +54,24 @@ export function LogoWhite() {
         offset={-70}
         duration={500}
         path='home'>
-        <img src="./image/adr-white.svg" alt="Logo Adriano Barbosa" />
+
+        <Flex
+          align='center'
+        >
+          <Icon mt={1} width="75" height="30" as={adrIconWhite} />
+
+          <Text
+            as='p'
+            ml='0.5rem'
+            color='whitesmoke'
+            textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
+            fontWeight="bold"
+          >
+            Adriano Barbosa
+          </Text>
+        </Flex>
       </ScrollLink>
-      <p className={styles.pWhite}>Adriano Barbosa</p>
-    </div>
+    </Flex>
     </>
   );
 }

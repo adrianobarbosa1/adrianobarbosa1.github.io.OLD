@@ -12,20 +12,41 @@ import {
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 import DesktopNav from './NavBar/DesktopNav';
 import MobileNav from './NavBar/MobileNav';
+import { Logo } from '../Logo';
+import { useState } from 'react';
 
 export default function Header() {
     const { isOpen, onToggle } = useDisclosure();
+    const [header, setHeader] = useState(false);
+
+    const changeBackground = () => {
+        if (window.scrollY >= 70) {
+            setHeader(true)
+        } else {
+            setHeader(false)
+        }
+    }
+
+    if (typeof window !== "undefined") {
+        window.addEventListener('scroll', changeBackground)
+    }
 
     return (
-        <Box>
+        <Box
+            position='sticky'
+            top='0'
+        >
             <Flex
-                bg="transparent"
+                bg={header ? "white" : 'transparent'}
+                boxShadow={header ? 'md' : ''}
                 color={useColorModeValue('gray.600', 'white')}
                 minH={'60px'}
                 py={{ base: 2 }}
                 px={{ base: 4 }}
-                borderColor={useColorModeValue('gray.200', 'gray.900')}
-                align={'center'}>
+                align={'center'}
+                z-indez='9'
+            >
+
                 <Flex
                     flex={{ base: 1, md: 'auto' }}
                     ml={{ base: -2 }}
@@ -39,14 +60,10 @@ export default function Header() {
                         aria-label={'Toggle Navigation'}
                     />
                 </Flex>
+
                 <Flex
-                    flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
-                    <Text
-                        textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
-                        fontFamily={'heading'}
-                        color={useColorModeValue('gray.800', 'white')}>
-                        Logo
-                    </Text>
+                    flex={{ base: 2 }} justify={{ xs: 'center', md: 'start' }}>
+                    <Logo />
                     <Spacer />
                     <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
                         <DesktopNav />

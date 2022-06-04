@@ -10,7 +10,7 @@ const IndexPage: NextPage = () => {
     <>
       <Home />
       <Sobre />
-      <Servicos />
+      {/* <Servicos /> */}
       <Portfolio />
       <Contato />
     </>
