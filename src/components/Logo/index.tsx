@@ -21,7 +21,7 @@ export function Logo() {
             align='center'
           >
 
-            <Icon mt={1} width="75" height="30" as={adrIcon} />
+            <Icon width="75" height="30" as={adrIcon} />
 
             <Text
               as='p'
