@@ -1,19 +1,18 @@
+import { useState } from 'react';
 import {
     Box,
     Flex,
-    Text,
     IconButton,
     Collapse,
     useColorModeValue,
-    useBreakpointValue,
     useDisclosure,
     Spacer,
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
+
 import DesktopNav from './NavBar/DesktopNav';
 import MobileNav from './NavBar/MobileNav';
 import { Logo } from '../Logo';
-import { useState } from 'react';
 
 export default function Header() {
     const { isOpen, onToggle } = useDisclosure();
@@ -44,7 +43,6 @@ export default function Header() {
                 py={{ base: 2 }}
                 px={{ base: 4 }}
                 align={'center'}
-                z-indez='9'
             >
 
                 <Flex
