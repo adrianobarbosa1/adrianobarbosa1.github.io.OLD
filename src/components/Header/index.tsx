@@ -10,9 +10,9 @@ import {
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 
-import DesktopNav from './NavBar/DesktopNav';
-import MobileNav from './NavBar/MobileNav';
 import { Logo } from '../Logo';
+import DesktopNav from './DesktopNav';
+import MobileNav from './MobileNav';
 
 export default function Header() {
     const { isOpen, onToggle } = useDisclosure();

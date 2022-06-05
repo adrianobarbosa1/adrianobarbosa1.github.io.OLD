@@ -1,6 +1,6 @@
-import { Box, Flex, HStack, Icon, Stack, Text, useBreakpointValue } from "@chakra-ui/react";
+import { Flex, Icon, Text, useBreakpointValue } from "@chakra-ui/react";
 import { Link as ScrollLink } from "react-scroll";
-import { adrIcon, adrIconWhite } from "../../../public/image/custonIcons";
+import { adrIcon, adrIconWhite } from "../socialIcons";
 
 export function Logo() {
   return (
