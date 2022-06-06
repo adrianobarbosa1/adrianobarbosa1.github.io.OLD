@@ -18,16 +18,16 @@ export const theme = extendTheme({
     'text': '#525252',
 
   },
-  fonts: {
-    body: "Montserrat",
-    heading: "Montserrat",
-  },
   styles: {
     global: {
       body: {
         bgGradient: 'linear(to-r, gray50, gray.100)',
-        color: 'black.100'
-      }
+        color: 'black.100',
+        fontFamily: "Montserrat, sans-serif",
+      },
+      html: {
+        fontFamily: "Montserrat, sans-serif",
+      },
     }
   }
 })

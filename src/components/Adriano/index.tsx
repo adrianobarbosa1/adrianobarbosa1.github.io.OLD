@@ -1,6 +1,6 @@
-import styles from "./styles.module.scss";
+import { Flex } from "@chakra-ui/react";
 import Typewriter from "typewriter-effect";
-import { FaFileExport } from "react-icons/fa";
+import styles from "./styles.module.scss";
 
 const textArray = [
   "DESENVOLVEDOR FULLSTACK",
@@ -11,8 +11,8 @@ const textArray = [
 export function Adriano() {
   return (
     <>
-      <div className={styles.container}>
-        <div className={styles.content}>
+      <Flex>
+        <Flex className={styles.content}>
           <h1>ADRIANO BARBOSA</h1>
           <p>
             DESENVOLVEDOR WEB <br />
@@ -27,8 +27,8 @@ export function Adriano() {
               }}
             />
           </div>
-        </div>
-      </div>
+        </Flex>
+      </Flex>
     </>
   );
 }
