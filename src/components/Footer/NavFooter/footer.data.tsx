@@ -1,5 +1,3 @@
-import { FaGithub, FaLinkedin } from "react-icons/fa";
-
 export const menuItems = [
   {
     path: "home",

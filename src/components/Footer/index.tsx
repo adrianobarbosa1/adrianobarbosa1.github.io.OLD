@@ -1,3 +1,4 @@
+import { Box, Flex, Icon, Link, Text } from '@chakra-ui/react';
 import logoLight from 'assets/logo-light.svg';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { LogoWhite } from '../Logo';
@@ -6,68 +7,69 @@ import styles from './styles.module.scss'
 
 export default function Footer() {
     return (
-        <footer className={styles.footer}>
-            <div className={styles.mainFooter}>
+        <Box
+            as='footer'
+            bg='#333333'
+            position='relative'
+        >
+            <Flex
+                direction='column'
+                justify='center'
+                align='center'
+                p='3.75rem 0 2.5rem'
+            >
                 <LogoWhite />
                 <NavFooter />
-                <div className={styles.socialIcons}>
-                    <a target="_blank" href="https://github.com/adrianobarbosa1">
-                        <i>
-                            <FaGithub />
-                        </i>
-                    </a>
-                    <a target="_blank" href="https://www.linkedin.com/in/adriano-barbosa-10892750">
-                        <i>
-                            <FaLinkedin />
-                        </i>
-                    </a>
-                </div>
-            </div>
-            <div className={styles.p}>
-                <p>
+                <Flex
+                    mt='1rem'
+                >
+                    <Link
+                        pt={2}
+                        mr='1rem'
+                        target="_blank"
+                        href="https://github.com/adrianobarbosa1"
+                        color='whitesmoke'
+                        transition={'color .3s'}
+                        _hover={{
+                            textDecoration: 'none',
+                            color: '#00B8E4',
+                        }}
+                    >
+                        <Icon w={4} h={4} as={FaGithub} />
+                    </Link>
+                    <Link
+                        pt={2}
+                        mr='1rem'
+                        target="_blank"
+                        href="https://www.linkedin.com/in/adriano-barbosa-10892750"
+                        color='whitesmoke'
+                        transition={'color .3s'}
+                        _hover={{
+                            textDecoration: 'none',
+                            color: '#00B8E4',
+                        }}
+                    >
+                        <Icon w={4} h={4} as={FaLinkedin} />
+                    </Link>
+                </Flex>
+            </Flex>
+            <Box
+                me={{
+                    base: "20px",
+                    md: "44px",
+                }}
+                w='100%'
+                textAlign='center'
+                p='15px 0 20px'
+                color='whitesmoke'
+                borderTop='1px solid rgb(131, 131, 131)'
+            >
+                <Text as='p' >
                     All rights reserved by
-                    <a target="_blanck" href=""> <span>Adriano Barbosa,</span></a>
+                    <Text as='span' color='#00B8E4'> Adriano Barbosa, </Text>
                     {` ${new Date().getFullYear()}.`}
-                </p>
-            </div>
-        </footer>
+                </Text>
+            </Box>
+        </Box>
     );
 }
-
-// const styles = {
-//     footer: {
-//         py: ['40px', null, null, null, null, '30px', '40px'],
-//         backgroundColor: '#020718',
-//         position: 'relative',
-//         '&::before': {
-//             content: '""',
-//             position: 'absolute',
-//             top: 0,
-//             left: 0,
-//             right: 0,
-//             bottom: 0,
-//             backgroundColor: '#ffffff',
-//             opacity: '0.05',
-//         },
-//     },
-//     container: {
-//         display: 'flex',
-//         flexDirection: ['column', null, null, null, null, 'row'],
-//         justifyContent: ['center', null, null, null, null, 'space-between'],
-//         alignItems: 'center',
-//         position: 'relative',
-//         flexWrap: 'wrap',
-//     },
-//     linksWrap: {
-//         mt: ['15px', null, null, null, null, '0'],
-//         display: 'flex',
-//         flexWrap: 'wrap',
-//         a: {
-//             fontSize: ['14px', null, null, null, '16px'],
-//             color: '#ffffff',
-//             transition: 'all 500ms ease',
-//             '&:hover': { opacity: 0.7 },
-//         },
-//         'a+a': { ml: ['15px', null, null, null, '35px'] },
-//     },
-// };

@@ -14,9 +14,7 @@ export const theme = extendTheme({
       "100": "#D1D2DC",
       "50": "#EEEEF2",
     },
-    blue: {
-      "500": "#00b8e4"
-    },
+    "secodary": "#00B8E4",
     'text': '#525252',
 
   },

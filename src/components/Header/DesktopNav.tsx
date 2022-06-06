@@ -14,7 +14,7 @@ import { NAV_ITEMS } from './navItems.data';
 
 export default function DesktopNav() {
     const linkColor = useColorModeValue('gray.600', 'gray.200');
-    const linkHoverColor = useColorModeValue('blue.500', 'white');
+    const linkHoverColor = useColorModeValue('#00B8E4', 'white');
 
     return (
         <Stack
