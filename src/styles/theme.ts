@@ -14,8 +14,9 @@ export const theme = extendTheme({
       "100": "#D1D2DC",
       "50": "#EEEEF2",
     },
-    "secodary": "#00B8E4",
+    "blue": "#00B8E4",
     'text': '#525252',
+    'textTitle': '#0F2137',
 
   },
   styles: {
