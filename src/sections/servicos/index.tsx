@@ -14,7 +14,7 @@ const Servicos = () => {
                 />
 
                 <Flex justify='center' >
-                    <Grid templateColumns='repeat(3, 2fr)' gap={6} maxWidth='1030px'>
+                    <Grid templateColumns={{ base: 'repeat(1, 6fr)', md: 'repeat(3, 2fr)' }} gap={6} maxWidth='1030px'>
                         {servicosData?.map((item, index) => (
                             <CardServicos key={index} data={item} />
                         ))}
