@@ -11,6 +11,7 @@ export default function Footer() {
             as='footer'
             bg='#333333'
             position='relative'
+            zIndex={-1}
         >
             <Flex
                 direction='column'

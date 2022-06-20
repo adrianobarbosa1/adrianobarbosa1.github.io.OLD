@@ -7,6 +7,10 @@ import {
     useColorModeValue,
     useDisclosure,
     Spacer,
+    Center,
+    Wrap,
+    WrapItem,
+    Button,
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 
@@ -15,8 +19,10 @@ import DesktopNav from './DesktopNav';
 import MobileNav from './MobileNav';
 
 export default function Header() {
-    const { isOpen, onToggle } = useDisclosure();
+    const { isOpen, onToggle, onClose } = useDisclosure();
     const [header, setHeader] = useState(false);
+
+    console.log(isOpen)
 
     const changeBackground = () => {
         if (window.scrollY >= 70) {
@@ -31,10 +37,10 @@ export default function Header() {
     }
 
     return (
-        <Flex
+        <Center
+            css={{ flexFlow: 'row wrap' }}
             position='sticky'
             top='0'
-            justify='center'
             bg={header ? "white" : 'transparent'}
             boxShadow={header ? 'md' : ''}
             color={useColorModeValue('gray.600', 'white')}
@@ -42,12 +48,10 @@ export default function Header() {
             <Flex
                 maxWidth={1366}
                 w='100%'
-
                 minH={'60px'}
                 py={{ base: 2 }}
                 px={{ base: 4 }}
                 align={'center'}
-                justify='space-between'
             >
 
                 <Flex
@@ -78,7 +82,7 @@ export default function Header() {
             <Collapse in={isOpen} animateOpacity>
                 <MobileNav />
             </Collapse>
-        </Flex>
+        </Center>
     );
 }
 
