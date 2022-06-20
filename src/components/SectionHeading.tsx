@@ -23,7 +23,7 @@ const SectionHeading
           <Heading
             color='textTitle'
             fontWeight='600'
-            fontSize='1.75rem'
+            fontSize={{ base: '1.2rem', md: '1.75rem' }}
             lineHeight='1.5'
           >
             {emoji ? <Text as='span'>{title}</Text> : title}

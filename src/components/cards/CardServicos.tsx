@@ -4,14 +4,14 @@ import Image from "next/image";
 const CardServicos = ({ data, ...props }) => {
     return (
         <Flex direction='column' textAlign='center' {...props}>
-            <Box as='figure' minWidth='4.375rem' mr='1.875rem' m='0 0 20px'>
+            <Box as='figure' minWidth='4.375rem' mr='1.875rem' m='0 0 20px' zIndex='-1'>
                 <Image src={data?.icon} alt={data?.title} />
             </Box>
 
             <Box>
                 <Heading
                     fontWeight='600'
-                    fontSize='1.2rem'
+                    fontSize={{ base: '1rem', md: '1.2rem' }}
                     lineHeight='1.28'
                     color='textTitle'
                     mb='1.25rem'
@@ -22,6 +22,7 @@ const CardServicos = ({ data, ...props }) => {
                 <Text
                     as='p'
                     fontSize='1rem'
+                    mx={{ base: '1rem' }}
                     fontWeight='400'
                     lineHeight='1.88'
                     color='text'
