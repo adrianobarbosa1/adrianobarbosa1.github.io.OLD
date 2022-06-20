@@ -31,18 +31,23 @@ export default function Header() {
     }
 
     return (
-        <Box
+        <Flex
             position='sticky'
             top='0'
+            justify='center'
+            bg={header ? "white" : 'transparent'}
+            boxShadow={header ? 'md' : ''}
+            color={useColorModeValue('gray.600', 'white')}
         >
             <Flex
-                bg={header ? "white" : 'transparent'}
-                boxShadow={header ? 'md' : ''}
-                color={useColorModeValue('gray.600', 'white')}
+                maxWidth={1366}
+                w='100%'
+
                 minH={'60px'}
                 py={{ base: 2 }}
                 px={{ base: 4 }}
                 align={'center'}
+                justify='space-between'
             >
 
                 <Flex
@@ -73,7 +78,7 @@ export default function Header() {
             <Collapse in={isOpen} animateOpacity>
                 <MobileNav />
             </Collapse>
-        </Box>
+        </Flex>
     );
 }
 
