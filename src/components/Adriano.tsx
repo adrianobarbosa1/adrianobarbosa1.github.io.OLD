@@ -21,7 +21,7 @@ export function Adriano() {
           fontWeight={700}
         >
 
-          <Heading color='text' fontSize={{ base: '1.2rem', md: '1.75rem' }}>ADRIANO BARBOSA</Heading>
+          <Heading color='text' fontSize={{ base: '1.75rem', md: '3rem' }}>ADRIANO BARBOSA</Heading>
           <Text as='p' color='blue' >
             DESENVOLVEDOR WEB <br />
             PROGRAMADOR JAVASCRIPT
