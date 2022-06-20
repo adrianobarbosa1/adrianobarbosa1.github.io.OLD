@@ -41,7 +41,7 @@ export default function Header() {
             css={{ flexFlow: 'row wrap' }}
             position='sticky'
             top='0'
-            bg={header ? "white" : 'transparent'}
+            bg={{ base: 'rgba(255,255,255,0.5)', md: 'white' }}
             boxShadow={header ? 'md' : ''}
             color={useColorModeValue('gray.600', 'white')}
         >

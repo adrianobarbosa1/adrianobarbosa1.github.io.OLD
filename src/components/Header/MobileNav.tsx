@@ -7,7 +7,7 @@ import {
 } from '@chakra-ui/react';
 
 import { Link as ScrollLink } from "react-scroll";
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaRegIdBadge } from 'react-icons/fa';
 
 import { NAV_ITEMS } from './navItems.data';
 
@@ -17,7 +17,7 @@ export default function MobileNav() {
 
     return (
         <Stack
-            bg={useColorModeValue('white', 'gray.800')}
+            bg='rgba(255,255,255,0.5)'
             p={4}
             display={{ md: 'none' }}
             w='350px'
