@@ -3,7 +3,6 @@ import logoLight from 'assets/logo-light.svg';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { LogoWhite } from '../Logo';
 import { NavFooter } from './NavFooter';
-import styles from './styles.module.scss'
 
 export default function Footer() {
     return (
