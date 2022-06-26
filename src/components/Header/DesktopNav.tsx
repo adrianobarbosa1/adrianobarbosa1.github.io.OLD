@@ -28,36 +28,36 @@ export default function DesktopNav() {
                 <Box key={navItem.label}>
                     <Popover trigger={'hover'} placement={'bottom-start'}>
                         <PopoverTrigger>
+                            <ScrollLink
+                                activeClass="active"
+                                to={navItem.path}
+                                spy={true}
+                                smooth={true}
+                                offset={-70}
+                                duration={500}
+                                key={i}
+                                path={navItem.path}
 
-                            <Link
-                                p={2}
-                                fontSize={'sm'}
-                                fontWeight="bold"
-                                color={linkColor}
-                                transition={'color .3s'}
-                                _hover={{
-                                    textDecoration: 'none',
-                                    color: linkHoverColor,
-                                }}
-                                _active={{
-                                    textDecoration: 'none',
-                                    color: linkHoverColor,
-                                }}
                             >
-                                <ScrollLink
-                                    activeClass="active"
-                                    to={navItem.path}
-                                    spy={true}
-                                    smooth={true}
-                                    offset={-70}
-                                    duration={500}
-                                    key={i}
-                                    path={navItem.path}
-
+                                <Link
+                                    p={2}
+                                    fontSize={'sm'}
+                                    fontWeight="bold"
+                                    color={linkColor}
+                                    transition={'color .3s'}
+                                    _hover={{
+                                        textDecoration: 'none',
+                                        color: linkHoverColor,
+                                    }}
+                                    _active={{
+                                        textDecoration: 'none',
+                                        color: linkHoverColor,
+                                    }}
                                 >
+
                                     {navItem.label}
-                                </ScrollLink>
-                            </Link>
+                                </Link>
+                            </ScrollLink>
                         </PopoverTrigger>
                     </Popover>
                 </Box>
