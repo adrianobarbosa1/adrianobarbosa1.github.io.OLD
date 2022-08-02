@@ -1,3 +1,4 @@
+
 export default interface NavItem {
   id: number;
   label: string;
@@ -10,26 +11,26 @@ export const NAV_ITEMS: Array<NavItem> = [
   {
     id: 1,
     label: "Inicio",
-    path: "home",
+    path: "#home",
   },
   {
     id: 2,
     label: "Sobre",
-    path: "sobre",
+    path: "#sobre",
   },
   {
     id: 3,
     label: "Serviços",
-    path: "servicos",
+    path: "#servicos",
   },
   {
     id: 4,
     label: "Portfólio",
-    path: "portfolio",
+    path: "#portfolio",
   },
   {
     id: 5,
     label: "Contato",
-    path: "contato",
+    path: "#contato",
   },
 ];

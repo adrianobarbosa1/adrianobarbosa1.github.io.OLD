@@ -2,14 +2,11 @@ import {
     Box,
     Stack,
     Link,
-    Popover,
-    PopoverTrigger,
     useColorModeValue,
     Icon,
 } from '@chakra-ui/react';
-import { Link as ScrollLink } from "react-scroll";
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
-
+import NextLink from "next/link"
 import { NAV_ITEMS } from './navItems.data';
 
 export default function DesktopNav() {
@@ -23,50 +20,32 @@ export default function DesktopNav() {
             direction={'row'}
             spacing={4}
         >
-
-            {NAV_ITEMS.map((navItem, i) => (
+            {NAV_ITEMS.map((navItem) => (
                 <Box key={navItem.label}>
-                    <Popover trigger={'hover'} placement={'bottom-start'}>
-                        <PopoverTrigger>
-                            <ScrollLink
-                                activeClass="active"
-                                to={navItem.path}
-                                spy={true}
-                                smooth={true}
-                                offset={-70}
-                                duration={500}
-                                key={i}
-                                path={navItem.path}
+                    <NextLink href={navItem.path} passHref>
+                        <Link
+                            p={2}
+                            fontSize={'sm'}
+                            fontWeight="bold"
+                            color={linkColor}
+                            transition={'color .3s'}
+                            _hover={{
+                                textDecoration: 'none',
+                                color: linkHoverColor,
+                            }}
+                        >
 
-                            >
-                                <Link
-                                    p={2}
-                                    fontSize={'sm'}
-                                    fontWeight="bold"
-                                    color={linkColor}
-                                    transition={'color .3s'}
-                                    _hover={{
-                                        textDecoration: 'none',
-                                        color: linkHoverColor,
-                                    }}
-                                    _active={{
-                                        textDecoration: 'none',
-                                        color: linkHoverColor,
-                                    }}
-                                >
-
-                                    {navItem.label}
-                                </Link>
-                            </ScrollLink>
-                        </PopoverTrigger>
-                    </Popover>
+                            {navItem.label}
+                        </Link>
+                    </NextLink>
                 </Box>
             ))
             }
+
             <Link
                 pt={2}
-                target="_blank"
                 href="https://github.com/adrianobarbosa1"
+                isExternal
                 color={linkColor}
                 transition={'color .3s'}
                 _hover={{
@@ -76,10 +55,11 @@ export default function DesktopNav() {
             >
                 <Icon w={4} h={4} as={FaGithub} />
             </Link>
+
             <Link
                 pt={2}
-                target="_blank"
                 href="https://www.linkedin.com/in/adriano-barbosa-10892750"
+                isExternal
                 color={linkColor}
                 transition={'color .3s'}
                 _hover={{

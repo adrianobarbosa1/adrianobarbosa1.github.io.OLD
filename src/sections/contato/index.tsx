@@ -40,10 +40,8 @@ const Contato = () => {
     return (
         <Flex
             as='section'
-            maxW='1120px'
             h='100vh'
             w='100%'
-            pt='1rem'
             id="contato"
             flexDir='column'
             bg={useColorModeValue('gray.100', 'gray.900')}
@@ -59,6 +57,7 @@ const Contato = () => {
             <Flex
                 align={'center'}
                 justify={'center'}
+                mt='-7rem'
             >
                 <Box boxSize='sm'>
                     <Image src='image/contact-img.png' alt='contato' />
@@ -67,7 +66,7 @@ const Contato = () => {
                 <Box
                     borderRadius="lg"
                     m={{ base: 5, md: 16, lg: 10 }}
-                // p={{ base: 5, lg: 16 }}
+                    p={{ base: 5, lg: 16 }}
                 >
                     <Box>
                         <VStack spacing={{ base: 4, md: 8, lg: 20 }}>
@@ -134,7 +133,7 @@ const Contato = () => {
                 </Box>
             </Flex>
 
-        </Flex>
+        </Flex >
     );
 };
 

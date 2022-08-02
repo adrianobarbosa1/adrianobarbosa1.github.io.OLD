@@ -12,7 +12,6 @@ const Servicos = () => {
             maxW='1120px'
             h='100vh'
             m='0 auto'
-            pt='1rem'
             flexDir='column'
         >
             <Box  >

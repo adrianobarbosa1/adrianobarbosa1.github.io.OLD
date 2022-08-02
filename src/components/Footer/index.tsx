@@ -18,7 +18,9 @@ export default function Footer() {
                 align='center'
                 p='3.75rem 0 2.5rem'
             >
-                <LogoWhite />
+                <Box mb='2rem'>
+                    <LogoWhite />
+                </Box>
                 <NavFooter />
                 <Flex
                     mt='1rem'

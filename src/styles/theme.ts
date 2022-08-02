@@ -23,11 +23,16 @@ export const theme = extendTheme({
     global: {
       body: {
         bgGradient: 'linear(to-r, gray50, gray.100)',
-        color: 'black.100',
-        fontFamily: "Montserrat, sans-serif",
+        section: {
+          minHeight: '100vh',
+          padding: '0 9%',
+          paddingTop: '4rem',
+          paddingBottom: '2rem',
+        }
       },
       html: {
         fontFamily: "Montserrat, sans-serif",
+        color: 'black.100',
       },
     }
   }
