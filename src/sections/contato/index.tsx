@@ -60,7 +60,7 @@ const Contato = () => {
                 mt='-7rem'
             >
                 <Box boxSize='sm'>
-                    <Image src='image/contact-img.png' alt='contato' />
+                    <Image src='image/contato/contact-img.png' alt='contato' />
                 </Box>
 
                 <Box

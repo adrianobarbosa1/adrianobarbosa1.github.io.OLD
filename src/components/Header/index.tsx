@@ -22,8 +22,6 @@ export default function Header() {
     const { isOpen, onToggle, onClose } = useDisclosure();
     const [header, setHeader] = useState(false);
 
-    console.log(isOpen)
-
     const changeBackground = () => {
         if (window.scrollY >= 70) {
             setHeader(true)

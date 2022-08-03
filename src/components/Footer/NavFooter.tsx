@@ -1,8 +1,7 @@
 import { Flex, Link } from "@chakra-ui/react";
 import React from "react";
-import { Link as ScrollLink } from "react-scroll";
-
-import { menuItems } from "./footer.data";
+import NextLink from "next/link"
+import { NAV_ITEMS } from "../navItems.data";
 
 export function NavFooter() {
 
@@ -15,20 +14,11 @@ export function NavFooter() {
           md: "row",
         }}
       >
-        {menuItems.map(({ path, label }, i) => {
+        {NAV_ITEMS.map(({ path, label }, i) => {
           return (
-            <ScrollLink
-              activeClass="active"
-              to={path}
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-              key={i}
-              path={path}
-            >
-
+            <NextLink href={path} passHref key={`${path}${i}`}>
               <Link
+
                 flex={{ base: 1, md: 'auto' }}
                 color='whitesmoke'
                 cursor='pointer'
@@ -39,11 +29,12 @@ export function NavFooter() {
                   textDecoration: 'none',
                   color: '#00B8E4',
                 }}
-
               >
+
                 {label}
               </Link>
-            </ScrollLink>
+            </NextLink>
+
           );
         })}
 

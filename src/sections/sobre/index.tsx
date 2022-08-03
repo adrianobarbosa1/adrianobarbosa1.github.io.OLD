@@ -27,13 +27,13 @@ const Sobre = () => {
                         <Image
                             borderRadius='full'
                             boxSize='150px'
-                            src='image/adriano.jpg'
+                            src='image/sobre/adriano.jpg'
                             alt='Adriano Barbosa'
                         />
                     </Flex>
                     <Box border='1px solid red' w='60%'>
                         <Text as='p' px={{ base: '2', md: '10' }} py={{ base: '2', md: '10' }}>
-                            Formadoe em Análise e Desenvolvimento de Sistemas,
+                            Formado em Análise e Desenvolvimento de Sistemas,
                             Programador e desenvolvedor há mais de 6 anos, atuando diretamente no mercado.
                             Teve início na carreira em 2016 quando descobriu seu maior vício: códigos.
                             Seu primeiro trabalho foi na secretaria da educação, que

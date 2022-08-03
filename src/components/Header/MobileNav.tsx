@@ -6,10 +6,9 @@ import {
     useColorModeValue,
 } from '@chakra-ui/react';
 
-import { Link as ScrollLink } from "react-scroll";
-import { FaGithub, FaLinkedin, FaRegIdBadge } from 'react-icons/fa';
-
-import { NAV_ITEMS } from './navItems.data';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import NextLink from "next/link"
+import { NAV_ITEMS } from '../navItems.data';
 
 export default function MobileNav() {
     const linkColor = useColorModeValue('gray.600', 'gray.200');
@@ -26,38 +25,29 @@ export default function MobileNav() {
 
             {NAV_ITEMS.map((navItem, i) => (
 
+                <NextLink href={navItem.path} passHref key={`${navItem}${i}`}>
+                    <Link
 
-                <ScrollLink
-                    activeClass="active"
-                    to={navItem.path}
-                    spy={true}
-                    smooth={true}
-                    offset={-70}
-                    duration={500}
-                    key={i}
-                    path={navItem.path}
-
-                >
-                    <Stack
+                        p={2}
+                        fontSize={'sm'}
+                        fontWeight="bold"
+                        color={linkColor}
+                        transition={'color .3s'}
                         mt={2}
                         pl={4}
                         borderLeft={1}
                         borderStyle={'solid'}
                         borderColor={useColorModeValue('gray.200', 'gray.700')}
-                        align={'start'}
-
+                        _hover={{
+                            textDecoration: 'none',
+                            color: linkHoverColor,
+                        }}
                     >
-                        <Link
-                            py={2}
-                            _hover={{
-                                textDecoration: 'none',
-                            }}
-                        >
-                            {navItem.label}
-                        </Link>
-                    </Stack>
 
-                </ScrollLink>
+                        {navItem.label}
+                    </Link>
+                </NextLink>
+
             ))}
             <Flex
                 direction={'column'}

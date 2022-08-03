@@ -9,7 +9,7 @@ const Home = () => {
             h='98vh'
             align='center'
             justify='center'
-            backgroundImage="url('/image/2.png')"
+            backgroundImage="url('/image/home/2.png')"
             backgroundPosition="cover"
             backgroundRepeat="no-repeat"
         >

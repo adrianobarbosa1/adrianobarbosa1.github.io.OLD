@@ -41,7 +41,7 @@ export function Logo() {
 
 export function LogoWhite() {
   return (
-    <><Flex
+    <Flex
       align='center'
       justify='center'
       cursor='pointer'
@@ -53,7 +53,7 @@ export function LogoWhite() {
         smooth={true}
         offset={-70}
         duration={500}
-        path='home'>
+        path='/home'>
 
         <Flex
           align='center'
@@ -72,6 +72,5 @@ export function LogoWhite() {
         </Flex>
       </ScrollLink>
     </Flex>
-    </>
   );
 }

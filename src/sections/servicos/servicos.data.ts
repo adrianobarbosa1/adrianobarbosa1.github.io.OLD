@@ -1,9 +1,9 @@
-import icon1 from '../../assets/images/servicos/1.png';
-import icon2 from '../../assets/images/servicos/2.png';
-import icon3 from '../../assets/images/servicos/3.png';
-import icon4 from '../../assets/images/servicos/4.png';
-import icon5 from '../../assets/images/servicos/5.png';
-import icon6 from '../../assets/images/servicos/6.png';
+import icon1 from '../../../public/image/servicos/1.png';
+import icon2 from '../../../public/image/servicos/2.png';
+import icon3 from '../../../public/image/servicos/3.png';
+import icon4 from '../../../public/image/servicos/4.png';
+import icon5 from '../../../public/image/servicos/5.png';
+import icon6 from '../../../public/image/servicos/6.png';
 
 export const servicosData = [
     {

@@ -17,7 +17,7 @@ const Servicos = () => {
             <Box  >
                 <Box pb='7.5rem'>
                     <SectionHeading
-                        slogan='Serviços'
+                        slogan='Habilidades'
                         title='Como posso te ajudar?'
                     />
 

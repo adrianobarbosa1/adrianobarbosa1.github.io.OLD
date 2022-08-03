@@ -7,7 +7,7 @@ import {
 } from '@chakra-ui/react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import NextLink from "next/link"
-import { NAV_ITEMS } from './navItems.data';
+import { NAV_ITEMS } from '../navItems.data';
 
 export default function DesktopNav() {
     const linkColor = useColorModeValue('gray.600', 'gray.200');
@@ -22,7 +22,7 @@ export default function DesktopNav() {
         >
             {NAV_ITEMS.map((navItem) => (
                 <Box key={navItem.label}>
-                    <NextLink href={navItem.path} passHref>
+                    <NextLink href={navItem.path} passHref scroll={true}>
                         <Link
                             p={2}
                             fontSize={'sm'}
