@@ -1,10 +1,10 @@
-
 export default interface NavItem {
-  id: number;
-  label: string;
-  subLabel?: string;
-  children?: Array<NavItem>;
-  path?: any;
+  id: number
+  label: string
+  subLabel?: string
+  children?: Array<NavItem>
+  path?: any
+  href?: string
 }
 
 export const NAV_ITEMS: Array<NavItem> = [
@@ -33,4 +33,4 @@ export const NAV_ITEMS: Array<NavItem> = [
     label: "Contato",
     path: "/#contato",
   },
-];
+]

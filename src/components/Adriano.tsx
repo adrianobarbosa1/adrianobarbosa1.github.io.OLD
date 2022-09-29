@@ -1,25 +1,24 @@
-import { Box, Flex, Heading, Text } from "@chakra-ui/react";
-import Typewriter from "typewriter-effect";
+import { Box, Flex, Heading, Text } from "@chakra-ui/react"
+import Typewriter from "typewriter-effect"
 
 const textArray = [
   "DESENVOLVEDOR FULLSTACK",
   "ESPECIALISTA NODE.JS",
   "ESPECIALISTA REACT.JS",
-];
+]
 
 export function Adriano() {
   return (
-    <Flex mb='2rem'>
+    <Flex mb="2rem">
       <Flex
         width={1120}
-        ml={{ base: '1rem', md: '10rem' }}
-        direction='column'
-        fontSize={{ base: '1.2rem', md: '1.75rem' }}
-        lineHeight='3rem'
+        ml={{ base: "1rem", md: "10rem" }}
+        direction="column"
+        fontSize={{ base: "1.2rem", md: "1.75rem" }}
+        lineHeight="3rem"
         fontWeight={700}
       >
-
-        <Heading color='text' fontSize={{ base: '1.75rem', md: '3rem' }}>ADRIANO BARBOSA</Heading>
+        {/* <Heading color='text' fontSize={{ base: '1.75rem', md: '3rem' }}>ADRIANO BARBOSA</Heading>
         <Text as='p' color='blue' >
           DESENVOLVEDOR WEB <br />
           PROGRAMADOR JAVASCRIPT
@@ -32,8 +31,8 @@ export function Adriano() {
               loop: true,
             }}
           />
-        </Box>
+        </Box> */}
       </Flex>
     </Flex>
-  );
+  )
 }
