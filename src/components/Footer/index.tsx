@@ -34,7 +34,6 @@ export default function Footer() {
           </Link>
           <Link
             pt={2}
-            mr="1rem"
             target="_blank"
             href="https://www.linkedin.com/in/adriano-barbosa-10892750"
             color="whitesmoke"
