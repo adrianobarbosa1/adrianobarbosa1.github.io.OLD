@@ -1,56 +1,104 @@
-import { Box, Flex, Image, Text } from '@chakra-ui/react';
-import SectionHeading from '../../components/SectionHeading';
+import React from "react"
+import {
+  Box,
+  Heading,
+  Link,
+  Image,
+  Text,
+  useColorModeValue,
+  Container,
+} from "@chakra-ui/react"
+import SectionHeading from "../../components/SectionHeading"
+import { BlogAuthor } from "./BlogAuthor"
 
-const Sobre = () => {
-    return (
-        <Flex
-            as='section'
-            id="sobre"
-            maxW='1120px'
-            h='100vh'
-            m='0 auto'
-            flexDir='column'
+const ArticleList = () => {
+  return (
+    <Container maxW={"7xl"} p="12" as="section" id="sobre">
+      <Box mt="1rem">
+        <SectionHeading slogan="Sobre" />
+      </Box>
+      <Box
+        marginTop={{ base: "1", sm: "5" }}
+        display="flex"
+        flexDirection={{ base: "column", sm: "row" }}
+        justifyContent="space-between"
+      >
+        <Box
+          display="flex"
+          flex="1"
+          marginRight="3"
+          position="relative"
+          alignItems="center"
         >
-            <Box>
-                {/* <Box pt='1rem' pb='7.5rem'> */}
-                <SectionHeading
-                    slogan='Sobre'
-                    title='Adriano Barbosa'
-                />
-                <Flex align={'center'} direction={{ base: 'column', md: 'row' }}>
-                    <Flex
-                        border='1px solid blue'
-                        w='40%'
-                        align='center'
-                        justify='center'
-                    >
-                        <Image
-                            borderRadius='full'
-                            boxSize='150px'
-                            src='image/sobre/adriano.jpg'
-                            alt='Adriano Barbosa'
-                        />
-                    </Flex>
-                    <Box border='1px solid red' w='60%'>
-                        <Text as='p' px={{ base: '2', md: '10' }} py={{ base: '2', md: '10' }}>
-                            Formado em Análise e Desenvolvimento de Sistemas,
-                            Programador e desenvolvedor há mais de 6 anos, atuando diretamente no mercado.
-                            Teve início na carreira em 2016 quando descobriu seu maior vício: códigos.
-                            Seu primeiro trabalho foi na secretaria da educação, que
+          <Box
+            width={{ base: "100%", sm: "85%" }}
+            zIndex="2"
+            marginLeft={{ base: "0", sm: "5%" }}
+            marginTop="5%"
+          >
+            <Link textDecoration="none" _hover={{ textDecoration: "none" }}>
+              <Image
+                borderRadius="lg"
+                w={"400px"}
+                src={"image/sobre/adriano-barbosa.jpeg"}
+                alt="some good alt text"
+                objectFit="contain"
+              />
+            </Link>
+          </Box>
 
-                            o proporcionou um alavancamento nas suas habilidades,
-                            a partir daí começou com projetos externos das mais diversas formas, Websites,
-                            Aplicativos, Sistemas, adquirindo um vasto conhecimento nas diversas linguagens
-                            de programação hoje utilizadas no mercado.
+          <Box zIndex="1" width="100%" position="absolute" height="100%">
+            <Box
+              bgGradient={useColorModeValue(
+                "radial(orange.600 1px, transparent 1px)",
+                "radial(orange.300 1px, transparent 1px)"
+              )}
+              backgroundSize="20px 20px"
+              opacity="0.4"
+              height="100%"
+            />
+          </Box>
+        </Box>
 
-                        </Text>
+        <Box
+          display="flex"
+          flex="1"
+          flexDirection="column"
+          justifyContent="center"
+          marginTop={{ base: "3", sm: "0" }}
+        >
+          <Heading marginTop="1">
+            <Link textDecoration="none" _hover={{ textDecoration: "none" }}>
+              Adriano Barbosa
+            </Link>
+          </Heading>
+          <Text
+            as="p"
+            marginTop="2"
+            color={useColorModeValue("gray.700", "gray.200")}
+            fontSize="lg"
+          >
+            Sou formado em Análise e Desenvolvimento de Sistemas, Programador e
+            Desenvolvedor há mais de 6 anos, atuando diretamente no mercado.
+            Tive início na carreira em 2016 quando descobri meu maior vício:
+            códigos. Meu primeiro trabalho foi na Secretaria da Educação em
+            Anápolis, que me proporcionou um alavancamento em minhas
+            habilidades, a partir daí começei a fazer projetos externos das mais
+            diversas formas, websites, aplicativos, sistemas, adquiri um vasto
+            conhecimento. Nos dias de hoje me tornei um desenvolvedor Full
+            stack, trabalhando com Nest.js, Express, mongoDB, SQL, PostgreSQL no
+            lado servidor(Back-end) e Next.js, React, diversos frameworks css,
+            no lado cliente(Front-end), estou sempre me atualizando e
+            aprendendo.
+          </Text>
+          <BlogAuthor
+            name="Adriano Barbosa"
+            date={new Date("2022-09-30T19:01:27Z")}
+          />
+        </Box>
+      </Box>
+    </Container>
+  )
+}
 
-                    </Box>
-                </Flex>
-            </Box>
-            {/* </Box> */}
-        </Flex>
-    );
-};
-
-export default Sobre;
+export default ArticleList

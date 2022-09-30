@@ -24,7 +24,12 @@ const ImageSwiper = ({ slides }) => {
     >
       {slides.map((card, index) => {
         return (
-          <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
+          <Swiper
+            navigation={true}
+            modules={[Navigation]}
+            className="mySwiper"
+            key={index}
+          >
             <SwiperSlide key={index}>
               <Image key={`${index}+img`} src={card.img} alt={card.alt} />
               <Text key={`${index}+txt`} className="legend">

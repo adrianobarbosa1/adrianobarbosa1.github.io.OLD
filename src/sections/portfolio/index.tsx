@@ -1,7 +1,6 @@
 import React from "react"
-import { Flex, Box } from "@chakra-ui/react"
+import { Flex, Box, Container } from "@chakra-ui/react"
 import SectionHeading from "../../components/SectionHeading"
-import ImageSlider from "../../components/ImageSwiper"
 import ImageSwiper from "../../components/ImageSwiper"
 
 const cards = [
@@ -23,24 +22,16 @@ const cards = [
 
 const Portfolio = () => {
   return (
-    <Flex
-      as="section"
-      id="portfolio"
-      maxW={{ base: "360px" }}
-      border="1px solid red"
-      h="100vh"
-      m="0 auto"
-      mb="1rem"
-      flexDir="column"
-    >
-      <SectionHeading
-        slogan="Portfólio"
-        title="Confira alguns projetos realizados"
-      />
-      <Box px="5rem">
-        <ImageSwiper slides={cards} />
+    <Container maxW={"7xl"} p="12" as="section" id="portfolio">
+      <Box mt="1rem">
+        <SectionHeading
+          slogan="Portfólio"
+          title="Confira alguns projetos realizados"
+        />
       </Box>
-    </Flex>
+
+      <ImageSwiper slides={cards} />
+    </Container>
   )
 }
 

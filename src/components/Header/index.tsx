@@ -55,6 +55,7 @@ export default function Header() {
         px={{ base: 4 }}
         boxShadow={header ? "md" : ""}
         align={"center"}
+        zIndex="1000"
       >
         <Flex
           flex={{ base: 1, md: "auto" }}
