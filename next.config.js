@@ -1,6 +1,14 @@
-const isProd = process.env.NODE_ENV === 'production'
-
-module.exports = {
-  // Use the CDN in production and localhost for development.
-  assetPrefix: isProd ? 'https://cdn.statically.io/gh/NaveenDA/naveenda.github.io/gh-pages/' : '',
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: false,
+  compress: true,
+  typescript: {
+    // !! WARN !!
+    // Dangerously allow production builds to successfully complete even if
+    // your project has type errors.
+    // !! WARN !!
+    ignoreBuildErrors: true,
+  },
 }
+
+module.exports = nextConfig

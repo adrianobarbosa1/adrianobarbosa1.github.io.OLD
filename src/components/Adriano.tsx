@@ -1,5 +1,4 @@
 import { Box, Flex, Heading, Text } from "@chakra-ui/react"
-import Typewriter from "typewriter-effect"
 
 const textArray = [
   "DESENVOLVEDOR FULLSTACK",
