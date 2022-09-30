@@ -25,13 +25,13 @@ export function Adriano() {
           PROGRAMADOR JAVASCRIPT
         </Text>
         <Box color="blue">
-          <Typewriter
+          {/* <Typewriter
             options={{
               strings: `<Text>${textArray}</Text>`,
               autoStart: true,
               loop: true,
             }}
-          />
+          /> */}
         </Box>
       </Flex>
     </Flex>
