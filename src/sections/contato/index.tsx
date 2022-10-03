@@ -80,6 +80,9 @@ export default function ContactFormWithSocialButtons() {
               </Stack>
 
               <Box
+                as="form"
+                action="https://formsubmit.co/adriano.barbosa100@gmail.com"
+                method="POST"
                 bg={useColorModeValue("white", "gray.700")}
                 borderRadius="lg"
                 p={8}
@@ -92,7 +95,12 @@ export default function ContactFormWithSocialButtons() {
 
                     <InputGroup>
                       <InputLeftElement children={<BsPerson />} />
-                      <Input type="text" name="name" placeholder="Seu Nome" />
+                      <Input
+                        type="text"
+                        name="name"
+                        placeholder="Seu Nome"
+                        required
+                      />
                     </InputGroup>
                   </FormControl>
 
@@ -105,6 +113,7 @@ export default function ContactFormWithSocialButtons() {
                         type="email"
                         name="email"
                         placeholder="Seu Email"
+                        required
                       />
                     </InputGroup>
                   </FormControl>
@@ -121,6 +130,7 @@ export default function ContactFormWithSocialButtons() {
                   </FormControl>
 
                   <Button
+                    type="submit"
                     colorScheme="blue"
                     bg="blue"
                     color="white"
