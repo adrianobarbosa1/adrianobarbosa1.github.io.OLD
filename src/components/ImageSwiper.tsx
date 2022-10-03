@@ -37,9 +37,27 @@ const ImageSwiper = ({ slides }) => {
         return (
           <SwiperSlide key={index}>
             <Box w="320px" h="211px" border="1px solid gray">
-              <Image key={`${index}+img`} src={card.img} alt={card.alt} />
+              <Link
+                key={`${index}+link`}
+                color="blue"
+                href={card.link}
+                isExternal
+              >
+                <Image
+                  key={`${index}+img`}
+                  src={card.img}
+                  alt={card.alt}
+                  cursor="pointer"
+                />
+              </Link>
             </Box>
-            <Text key={`${index}+txt`} className="legend">
+            <Text
+              key={`${index}+txt`}
+              className="legend"
+              ml="10px"
+              mt="10px"
+              mb="30px"
+            >
               <Link
                 key={`${index}+link`}
                 color="blue"
