@@ -13,7 +13,6 @@ const Portfolio = () => {
           title="Confira alguns projetos realizados"
         />
       </Box>
-
       <ImageSwiper slides={portfolioData} />
     </Box>
   )

@@ -6,31 +6,31 @@ export const portfolioData = [
   {
     title: "Meu lote Minha Historia",
     img: "/image/portfolio/1.png",
-    alt: "Portfolio Meu lote minha historia",
+    alt: "Meu lote minha historia",
     link: "http://meuloteminhahistoria.anapolis.go.gov.br:8089/",
   },
   {
     title: "Portal Brazlândia",
     img: "/image/portfolio/2.png",
-    alt: "Portfolio Portal Brazlândia",
+    alt: "Portal Brazlândia",
     link: "https://www.brazlandia.com.br/",
   },
   {
     title: "Graduação",
     img: "/image/portfolio/3.png",
-    alt: "Portfolio programa graduação",
+    alt: "programa graduação",
     link: "https://graduacao.anapolis.go.gov.br/",
   },
   {
     title: "Backend Meu Lote minha historia",
     img: "/image/portfolio/4.png",
-    alt: "Portfolio backend meu lote minha historia",
+    alt: "backend meu lote minha historia",
     link: "https://github.com/adrianobarbosa1/backend-mlmh",
   },
   {
     title: "Dashboard Graduação",
     img: "/image/portfolio/5.png",
-    alt: "Portfolio Dashboard Graduação",
+    alt: "Dashboard Graduação",
     link: "https://lh3.googleusercontent.com/pw/AL9nZEUP6eUsM9kg5lUOgFDp082pVkNa3m8EZlsmJ2t0uwyzTJk49lr1w0tTxT-s0Ul2bKHy6qBQwMAFZxMRu1htB-w9DWp9ogxHty92Ns-j29KLQgd3XBaloNDocuCNJ-kDC78CUcx6fmMfOXzKGKI71dED=w1346-h757-no?authuser=2",
   },
 ]

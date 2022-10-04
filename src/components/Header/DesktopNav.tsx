@@ -5,7 +5,6 @@ import {
   useColorModeValue,
   Icon,
   Popover,
-  PopoverTrigger,
   PopoverContent,
 } from "@chakra-ui/react"
 import { FaGithub, FaLinkedin } from "react-icons/fa"
@@ -23,23 +22,21 @@ export default function DesktopNav() {
       {NAV_ITEMS.map((navItem) => (
         <Box key={navItem.label}>
           <Popover trigger={"hover"} placement={"bottom-start"}>
-            <PopoverTrigger>
-              <NextLink href={navItem.path} passHref scroll={true}>
-                <Link
-                  p={2}
-                  href={navItem.href ?? "#"}
-                  fontSize={"sm"}
-                  fontWeight={500}
-                  color={linkColor}
-                  _hover={{
-                    textDecoration: "none",
-                    color: linkHoverColor,
-                  }}
-                >
-                  {navItem.label}
-                </Link>
-              </NextLink>
-            </PopoverTrigger>
+            <NextLink href={navItem.path} passHref scroll={true}>
+              <Link
+                p={2}
+                href={navItem.href ?? "#"}
+                fontSize={"sm"}
+                fontWeight={500}
+                color={linkColor}
+                _hover={{
+                  textDecoration: "none",
+                  color: linkHoverColor,
+                }}
+              >
+                {navItem.label}
+              </Link>
+            </NextLink>
 
             {navItem.children && (
               <PopoverContent
